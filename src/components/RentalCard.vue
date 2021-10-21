@@ -1,36 +1,37 @@
 <template>
-  <div class="rental">
+  <div class="rental" v-if="rental">
     <div class="image">
       <img :src="rental.image" />
     </div>
-    <div class="details">
-      <div>
-        <h3>{{ rental.title }}</h3>
-      </div>
-      <div>
-        <span>Owner: </span>
-        {{ rental.owner }}
-      </div>
+    <router-link :to="{ name: 'RentalDetails', params: { id: rental.id } }">
+      <div class="details">
+        <div>
+          <h3>{{ rental.title }}</h3>
+        </div>
+        <div>
+          <span>Owner: </span>
+          {{ rental.owner }}
+        </div>
 
-      <div>
-        <span>Type: </span>
-        {{ rental.type }}
+        <div>
+          <span>Type: </span>
+          {{ rental.type }}
+        </div>
+        <div>
+          <span>Location: </span>
+          {{ rental.location }}
+        </div>
+        <div>
+          <span>Number of Rooms: </span>
+          {{ rental.rooms }}
+        </div>
       </div>
-      <div>
-        <span>Location: </span>
-        {{ rental.location }}
-      </div>
-      <div>
-        <span>Number of Rooms: </span>
-        {{ rental.rooms }}
-      </div>
-    </div>
+    </router-link>
   </div>
 </template>
 
 <script>
 export default {
-  name: "RentalCard",
   props: {
     rental: {
       type: Object,
