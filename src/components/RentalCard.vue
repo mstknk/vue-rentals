@@ -3,30 +3,30 @@
     <div class="image">
       <img :src="rental.image" />
     </div>
-    <router-link :to="{ name: 'RentalDetails', params: { id: rental.id } }">
-      <div class="details">
+    <div class="details">
+      <router-link :to="{ name: 'RentalDetails', params: { id: rental.id } }">
         <div>
           <h3>{{ rental.title }}</h3>
         </div>
-        <div>
-          <span>Owner: </span>
-          {{ rental.owner }}
-        </div>
-
-        <div>
-          <span>Type: </span>
-          {{ rental.type }}
-        </div>
-        <div>
-          <span>Location: </span>
-          {{ rental.location }}
-        </div>
-        <div>
-          <span>Number of Rooms: </span>
-          {{ rental.rooms }}
-        </div>
+      </router-link>
+      <div>
+        <span>Owner: </span>
+        {{ rental.owner }}
       </div>
-    </router-link>
+
+      <div>
+        <span>Type: </span>
+        {{ rental.type }}
+      </div>
+      <div>
+        <span>Location: </span>
+        {{ rental.location }}
+      </div>
+      <div>
+        <span>Number of Rooms: </span>
+        {{ rental.rooms }}
+      </div>
+    </div>
   </div>
 </template>
 

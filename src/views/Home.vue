@@ -12,7 +12,7 @@
     <div>
       <div class="search-content">
         <span> Where would you like to stay?</span>
-        <input />
+        <input placeholder="Search for rentals"/>
       </div>
       <RentalCard v-for="rental in rentals" :key="rental.id" :rental="rental" />
     </div>
@@ -80,5 +80,11 @@ export default {
   background-color: rgba(255, 255, 255, 0.75);
   border: 1px solid #d3d3d3;
   display: block;
+    height: 44px;
+    padding: 0 36px 0 23px;
+    font-size: 20px;
+    border: 2px solid #bbb;
+    border-radius: 30px;
+    transition: all .2s ease-out;
 }
 </style>
