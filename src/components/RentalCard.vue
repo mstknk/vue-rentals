@@ -62,7 +62,6 @@ a {
   background-color: #f6f6f6;
   padding: 20px 25px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
 }
@@ -82,12 +81,18 @@ a {
   display: flex;
   height: 150px;
   margin: 20px 25px;
-  justify-content: space-between;
   align-content: space-around;
   flex-direction: column;
 }
 
 .rental h3 {
   flex-basis: 100%;
+  display: block;
+  font-size: 1.17em;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
 }
 </style>
