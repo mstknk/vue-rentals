@@ -29,6 +29,96 @@
       "rooms": 4,
       "location": "Portland",
       "image": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Wheeldon_Apartment_Building_-_Portland_Oregon.jpg"
+    },
+    {
+      "id": 4,
+      "title": "multi-family residential",
+      "description": "One-plus-five style apartment buildings in Austin, Texas",
+      "owner": "exas Doughnut",
+      "type": "Community – Apartment",
+      "rooms": 2,
+      "location": "Texas",
+      "image": "https://en.wikipedia.org/wiki/File:One-by-five_Apartments_Austin,_TX.jpg"
+    },
+    {
+      "id": 5,
+      "title": "New Jersey featuring three wood-frame stories over a concrete podium",
+      "description": "one-plus-five construction is an affordable housing apartment building in Los Angeles ",
+      "owner": "Wrap",
+      "type": "The wood-framed one-plus-five style",
+      "rooms": 3,
+      "location": "New Jersey",
+      "image": "https://en.wikipedia.org/wiki/File:PierVillage2.jpg"
+    },
+    {
+      "id": 6,
+      "title": "A Manhattan penthouse with swimming pool",
+      "description": "A Manhattan penthouse with swimming pool, as viewed from the Empire State Building observation deck",
+      "owner": "Robert A. M. Stern",
+      "type": "Penthouse",
+      "rooms": 5,
+      "location": "New York",
+      "image": "https://en.wikipedia.org/wiki/File:Rooftop_pool_NYC.jpg"
+    },
+    {
+      "id": 7,
+      "title": "Erland Lee Museum",
+      "description": "National Historic Site of Canada located on the ridge",
+      "owner": "Erland and Janet Lee",
+      "type": "Historic Home",
+      "rooms": 15,
+      "location": "Canada",
+      "image": "https://en.wikipedia.org/wiki/File:LeeMuseum.JPG"
+    },
+    {
+      "id": 8,
+      "title": "Faroe Islands, Streymoy, Kirkjubøur ",
+      "description": "Kirkjubøargarður The old farmhouse of Kirkjubøur",
+      "owner": "Patursson family",
+      "type": "Farmhouse",
+      "rooms": 23,
+      "location": "Kirkjubøur",
+      "image": "https://en.wikipedia.org/wiki/File:Faroe_Islands,_Streymoy,_Kirkjub%C3%B8ur_(1).jpg"
+    },
+    {
+      "id": 9,
+      "title": "Wooden building on the Bosphorus",
+      "description": " waterfront houses (yalı) on the Bosphorus.",
+      "owner": "Ahmet Afif Pasha",
+      "type": "yalı",
+      "rooms": 23,
+      "location": "Istanbul",
+      "image": "https://en.wikipedia.org/wiki/File:Wooden_building_on_the_Bosphorus.jpg"
+    },
+    {
+      "id": 10,
+      "title": "The interior of a loft conversion in Chicago",
+      "description": "An industrial, warehouse, or commercial space converted to an apartment is commonly called a loft, although some modern lofts are built by design.",
+      "owner": "Unknown",
+      "type": "Loft apartment",
+      "rooms": 6,
+      "location": "Chicago",
+      "image": "https://en.wikipedia.org/wiki/File:400SGreenLoft.jpg"
+    },
+    {
+      "id": 11,
+      "title": "Small buildings with a few one-storey dwellings",
+      "description": "A triple-decker in New England",
+      "owner": "Unknown",
+      "type": "triple-decker",
+      "rooms": 3,
+      "location": "Cambridge",
+      "image": "https://en.wikipedia.org/wiki/File:CambridgeTripleDecker.jpg"
+    },
+    {
+      "id": 12,
+      "title": "An apartment building in Kolonaki",
+      "description": "An apartment building in Kolonaki designed by architects Georges Goldberg and Prokopis Vasileiadis and built between 1935–1937",
+      "owner": "Unknown",
+      "type": "Modern",
+      "rooms": 9,
+      "location": "Athens",
+      "image": "https://en.wikipedia.org/wiki/Modern_architecture_in_Athens#/media/File:Apartment_building_on_Patriarchou_Ioakeim_and_Irodotou_Streets,_Athens,_Greece.jpg"
     }
   ]
 }
