@@ -10,8 +10,8 @@ const apiClient = axios.create({
 })
 
 export default {
-  getRentals() {
-    return apiClient.get('/rentals')
+  getRentals(perPage, page) {
+    return apiClient.get('/rentals?_limit=' + perPage + '&_page=' + page)
   },
   getRental(id) {
     return apiClient.get('/rentals/' + id)
