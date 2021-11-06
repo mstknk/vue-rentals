@@ -38,7 +38,7 @@
       "type": "Community – Apartment",
       "rooms": 2,
       "location": "Texas",
-      "image": "https://en.wikipedia.org/wiki/File:One-by-five_Apartments_Austin,_TX.jpg"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/9/9d/One-by-five_Apartments_Austin%2C_TX.jpg"
     },
     {
       "id": 5,
@@ -48,7 +48,7 @@
       "type": "The wood-framed one-plus-five style",
       "rooms": 3,
       "location": "New Jersey",
-      "image": "https://en.wikipedia.org/wiki/File:PierVillage2.jpg"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/9/9f/PierVillage2.jpg"
     },
     {
       "id": 6,
@@ -58,7 +58,7 @@
       "type": "Penthouse",
       "rooms": 5,
       "location": "New York",
-      "image": "https://en.wikipedia.org/wiki/File:Rooftop_pool_NYC.jpg"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/4/42/Rooftop_pool_NYC.jpg"
     },
     {
       "id": 7,
@@ -68,7 +68,7 @@
       "type": "Historic Home",
       "rooms": 15,
       "location": "Canada",
-      "image": "https://en.wikipedia.org/wiki/File:LeeMuseum.JPG"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/7/74/LeeMuseum.JPG"
     },
     {
       "id": 8,
@@ -78,7 +78,7 @@
       "type": "Farmhouse",
       "rooms": 23,
       "location": "Kirkjubøur",
-      "image": "https://en.wikipedia.org/wiki/File:Faroe_Islands,_Streymoy,_Kirkjub%C3%B8ur_(1).jpg"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/7/76/Faroe_Islands%2C_Streymoy%2C_Kirkjubøur_%281%29.jpg"
     },
     {
       "id": 9,
@@ -88,7 +88,7 @@
       "type": "yalı",
       "rooms": 23,
       "location": "Istanbul",
-      "image": "https://en.wikipedia.org/wiki/File:Wooden_building_on_the_Bosphorus.jpg"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/d/d1/Wooden_building_on_the_Bosphorus.jpg"
     },
     {
       "id": 10,
@@ -98,7 +98,7 @@
       "type": "Loft apartment",
       "rooms": 6,
       "location": "Chicago",
-      "image": "https://en.wikipedia.org/wiki/File:400SGreenLoft.jpg"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/4/40/400SGreenLoft.jpg"
     },
     {
       "id": 11,
@@ -108,7 +108,7 @@
       "type": "triple-decker",
       "rooms": 3,
       "location": "Cambridge",
-      "image": "https://en.wikipedia.org/wiki/File:CambridgeTripleDecker.jpg"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/a/ab/CambridgeTripleDecker.jpg"
     },
     {
       "id": 12,
@@ -118,7 +118,7 @@
       "type": "Modern",
       "rooms": 9,
       "location": "Athens",
-      "image": "https://en.wikipedia.org/wiki/Modern_architecture_in_Athens#/media/File:Apartment_building_on_Patriarchou_Ioakeim_and_Irodotou_Streets,_Athens,_Greece.jpg"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/7/7d/Apartment_building_on_Patriarchou_Ioakeim_and_Irodotou_Streets%2C_Athens%2C_Greece.jpg"
     }
   ]
 }
