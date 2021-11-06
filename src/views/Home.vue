@@ -12,9 +12,27 @@
     <div>
       <div class="search-content">
         <span> Where would you like to stay?</span>
-        <input placeholder="Search for rentals"/>
+        <input placeholder="Search for rentals" />
       </div>
       <RentalCard v-for="rental in rentals" :key="rental.id" :rental="rental" />
+
+      <div class="pagination">
+        <router-link
+          id="page-prev"
+          :to="{ name: 'Home', query: { page: page - 1 } }"
+          rel="prev"
+          v-if="page != 1"
+          >&#60; Previous</router-link
+        >
+
+        <router-link
+          id="page-next"
+          :to="{ name: 'Home', query: { page: page + 1 } }"
+          rel="next"
+          v-if="hasNextPage"
+          >Next &#62;</router-link
+        >
+      </div>
     </div>
   </div>
 </template>
@@ -23,25 +41,38 @@
 // @ is an alias to /src
 import RentalCard from "@/components/RentalCard.vue";
 import RentalService from "@/services/RentalService.js";
+import { watchEffect } from "vue";
 /***/
 export default {
   name: "Home",
+  props: ["page"],
   components: {
     RentalCard,
   },
   data() {
     return {
       rentals: null,
+      totalEvents: 0,
     };
   },
   created() {
-    RentalService.getRentals()
-      .then((response) => {
-        this.rentals = response.data;
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+    watchEffect(() => {
+      RentalService.getRentals(2, this.page)
+        .then((response) => {
+          this.rentals = response.data;
+          this.totalEvents = response.headers["x-total-count"];
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    });
+  },
+  computed: {
+    hasNextPage() {
+      var totalPages = Math.ceil(this.totalEvents / 2);
+
+      return this.page < totalPages;
+    },
   },
 };
 </script>
@@ -80,11 +111,29 @@ export default {
   background-color: rgba(255, 255, 255, 0.75);
   border: 1px solid #d3d3d3;
   display: block;
-    height: 44px;
-    padding: 0 36px 0 23px;
-    font-size: 20px;
-    border: 2px solid #bbb;
-    border-radius: 30px;
-    transition: all .2s ease-out;
+  height: 44px;
+  padding: 0 36px 0 23px;
+  font-size: 20px;
+  border: 2px solid #bbb;
+  border-radius: 30px;
+  transition: all 0.2s ease-out;
+}
+.pagination {
+  display: flex;
+  width: 1020px;
+  padding-top: 10px;
+}
+.pagination a {
+  flex: 1;
+  text-decoration: none;
+  color: #2c3e50;
+}
+
+#page-prev {
+  text-align: left;
+}
+
+#page-next {
+  text-align: right;
 }
 </style>
