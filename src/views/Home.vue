@@ -52,15 +52,15 @@ export default {
   data() {
     return {
       rentals: null,
-      totalEvents: 0,
+      totalRentals: 0,
     };
   },
   created() {
     watchEffect(() => {
-      RentalService.getRentals(2, this.page)
+      RentalService.getRentals(3, this.page)
         .then((response) => {
           this.rentals = response.data;
-          this.totalEvents = response.headers["x-total-count"];
+          this.totalRentals = response.headers["x-total-count"];
         })
         .catch((error) => {
           console.log(error);
@@ -69,7 +69,7 @@ export default {
   },
   computed: {
     hasNextPage() {
-      var totalPages = Math.ceil(this.totalEvents / 2);
+      var totalPages = Math.ceil(this.totalRentals / 3);
 
       return this.page < totalPages;
     },
