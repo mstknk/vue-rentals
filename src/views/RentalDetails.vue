@@ -1,27 +1,30 @@
 <template>
-  <div class="container">
+  <div class="container" v-if="rental">
     <div class="header-content">
       <img alt="Vue logo" class="logo" src="../assets/logo.png" />
 
-      <h1>{{ rental.title }}</h1>
+      <h1>{{ rental.propertyDescription.name }}</h1>
       <p>
         Nice find! This looks like a nice place to stay near
-        {{ rental.location }} .
+        {{ rental.pdpHeader.hotelLocation.locationName }} .
       </p>
     </div>
 
     <div class="detail-container">
       <div class="image">
-        <img :src="rental.image" class="image" />
+        <img
+          src="https://exp.cdn-hotels.com/hotels/1000000/30000/27300/27274/cb8526cf_w.jpg"
+          class="image"
+        />
       </div>
       <div v-if="rental" class="details">
-        <h3>About {{ rental.title }}</h3>
-        <span>Owner : {{ rental.owner }}</span>
-        <span>Type: {{ rental.type }}</span>
-        <span>Location :{{ rental.location }}</span>
-
-        <span>Description : {{ rental.description }}</span>
-        <span>Rooms : {{ rental.rooms }}</span>
+        <span>
+          {{ rental.propertyDescription.featuredPrice.currentPrice.formatted }}
+        </span>
+        <span>{{
+          rental.propertyDescription.featuredPrice.pricingAvailability
+        }}</span>
+        <span>{{ rental.pdpHeader.hotelLocation.locationName }}</span>
       </div>
     </div>
   </div>
@@ -35,12 +38,22 @@ export default {
   data() {
     return {
       rental: null,
+      images: null,
     };
   },
   created() {
     RentalService.getRental(this.id)
       .then((response) => {
-        this.rental = response.data;
+        this.rental = response.data.data.body;
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+
+    RentalService.getImages(this.id)
+      .then((response) => {
+        console.log(response.data);
+        this.images = response.data;
       })
       .catch((error) => {
         console.log(error);

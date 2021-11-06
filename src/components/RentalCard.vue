@@ -1,30 +1,31 @@
 <template>
   <div class="rental" v-if="rental">
     <div class="image">
-      <img :src="rental.image" />
+      <img :src="rental.optimizedThumbUrls.srpDesktop" />
     </div>
     <div class="details">
       <router-link :to="{ name: 'RentalDetails', params: { id: rental.id } }">
         <div>
-          <h3>{{ rental.title }}</h3>
+          <h3>{{ rental.name }}</h3>
         </div>
       </router-link>
       <div>
-        <span>Owner: </span>
-        {{ rental.owner }}
+        <span>
+          {{ rental.address.streetAddress }} , {{ rental.address.locality }},
+          {{ rental.address.postalCode }}, {{ rental.address.region }}</span
+        >
       </div>
 
       <div>
-        <span>Type: </span>
-        {{ rental.type }}
+        <span> {{ rental.ratePlan.price.current }}</span>
       </div>
       <div>
-        <span>Location: </span>
-        {{ rental.location }}
+        <span>Star Rating: </span>
+        {{ rental.starRating }}
       </div>
       <div>
-        <span>Number of Rooms: </span>
-        {{ rental.rooms }}
+        <span>Guest Reviews: </span>
+        {{ rental.guestReviews.badgeText }}
       </div>
     </div>
   </div>
@@ -74,7 +75,18 @@ a {
   margin: 20px 25px;
   text-align: center;
 }
-
+.gmap_canvas {
+  overflow: hidden;
+  background: none !important;
+  height: 372px;
+  width: 310px;
+}
+.mapouter {
+  position: relative;
+  text-align: right;
+  height: 372px;
+  width: 310px;
+}
 .rental .details {
   flex-basis: 50%;
   flex-grow: 2;

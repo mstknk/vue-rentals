@@ -12,7 +12,9 @@
     <div>
       <div class="search-content">
         <span> Where would you like to stay?</span>
-        <input placeholder="Search for rentals"/>
+        <input v-model="message" placeholder="Search for rentals" />
+
+        <button v-on:click="search">Search</button>
       </div>
       <RentalCard v-for="rental in rentals" :key="rental.id" :rental="rental" />
     </div>
@@ -23,6 +25,7 @@
 // @ is an alias to /src
 import RentalCard from "@/components/RentalCard.vue";
 import RentalService from "@/services/RentalService.js";
+
 /***/
 export default {
   name: "Home",
@@ -37,11 +40,23 @@ export default {
   created() {
     RentalService.getRentals()
       .then((response) => {
-        this.rentals = response.data;
+        this.rentals = response.data.data.body.searchResults.results;
       })
       .catch((error) => {
         console.log(error);
       });
+  },
+  methods: {
+    search: function () {
+      console.log("click" + this.message);
+      RentalService.getRentals()
+        .then((response) => {
+          this.rentals = response.data.data.body.searchResults.results;
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    },
   },
 };
 </script>
@@ -80,11 +95,11 @@ export default {
   background-color: rgba(255, 255, 255, 0.75);
   border: 1px solid #d3d3d3;
   display: block;
-    height: 44px;
-    padding: 0 36px 0 23px;
-    font-size: 20px;
-    border: 2px solid #bbb;
-    border-radius: 30px;
-    transition: all .2s ease-out;
+  height: 44px;
+  padding: 0 36px 0 23px;
+  font-size: 20px;
+  border: 2px solid #bbb;
+  border-radius: 30px;
+  transition: all 0.2s ease-out;
 }
 </style>
